@@ -2,16 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-    const menu = <div>
+    const menu = <div className='md:flex'>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/'>Tools</Link></li>
         <li><Link to='/'>Dashboard</Link></li>
-        <li><Link to='/'>My Orders</Link></li>
-        <li><Link to='/'>Add Review</Link></li>
-        <li><Link to='/'>My Profile</Link></li>
+        <li><Link to='/login'>Login</Link></li>
     </div>
     return (
-        <div class="navbar bg-base-100">
+        <div class="navbar bg-green-500 text-white">
             <div class="navbar-start">
                 <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">

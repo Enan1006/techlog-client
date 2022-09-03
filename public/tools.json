@@ -1,0 +1,56 @@
+[
+    {
+        "image": "https://i.ibb.co/s3gfLc7/1-jbl-quantum-200-wired-over-ear-gaming-headphones.jpg",
+        "name": "JBL Quantum 200 Wired Over-Ear Gaming",
+        "description": "JBL is known for making some of the best audio products in the world. The JBL Quantum 200 gaming headset is no exception. It delivers incredible sound quality that will give you a competitive edge in any gaming situation. Not only does this headset deliver amazing sound, but it’s also incredibly comfortable to wear. You can wear it for hours on end without feeling fatigue. Plus, the microphone is crystal clear, so you can communicate with your team clearly and effectively. Order your JBL Quantum 200 gaming headset today!",
+        "price": 65,
+        "minimunQuantity": 100,
+        "availableQuality": 2000,
+        "category": "headphone"
+    },
+    {
+        "image": "https://i.ibb.co/tQzSmty/2-xiaomi-mi-34-inch-curved-gaming-monitor.jpg",
+        "name": "Xiaomi Mi 34 Inch Curved Gaming Monitor",
+        "description": "The display brightness is up to 300 nits, with a high contrast ratio of 3000:1, the game screen is from bright white to deep black, clear and beautiful, vivid and vivid. 1500R large curvature surrounded visual field, gives you an immersive experience. The 1500R’s extremely large curvature design, the line of sight is surrounded by the screen, showing a panoramic view of the overall immersion; the curved screen has a smaller visual tilt angle, and the eyes are almost equidistant, reducing visual distortion, fully restoring the true Horizons of each corner.",
+        "price": 650,
+        "minimunQuantity": 30,
+        "availableQuality": 500,
+        "category": "computer"
+    },
+    {
+        "image": "https://i.ibb.co/SnHrywQ/3-razer-basilisk-16000-dpi-optical-sensor-gaming-mouse.jpg",
+        "name": "Razer Basilisk 16000 DPI Optical Sensor Gaming",
+        "description": "igh-Precision 16, 000 DPI Optical Sensor: Offers on-the-fly sensitivity adjustment through dedicated DPI buttons (reprogrammable) for gaming. Customizable Chroma RGB Color Profiles: Includes 16. 8 million color combinations w/ included preset profiles Quick DPI Toggle for FPS Gaming: A replaceable side button for different hand sizes allows for quick, temporary switching to lower sensitivity settings for instant sniping. Personalized Scroll Wheel Resistance: A physical allows for scrolling to be as clicky or smooth as desired. 8 Programmable Buttons: Allows for reconfiguration and assignment of complex macro functions through Razer Synapse.",
+        "price": 620,
+        "minimunQuantity": 20,
+        "availableQuality": 650,
+        "category": "computer"
+    },
+    {
+        "image": "https://i.ibb.co/L65Hyc3/4-samsung-galaxy-watch4.jpg",
+        "name": "Samsung Galaxy Watch 4 Smartwatch",
+        "description": "The Samsung Galaxy Watch4 has been designed to help you learn more so you can achieve more. It goes beyond tracking steps and calories to offer actionable insights on everything from your running style to your heart rate. Galaxy Watch4 tracks your movements so you can just slip it on and get working out. With swimming added to automatic tracking you now get seven exercises, while manual tracking works for all activities for dozens you can track.",
+        "price": 170,
+        "minimunQuantity": 70,
+        "availableQuality": 1100,
+        "category": "watch"
+    },
+    {
+        "image": "https://i.ibb.co/M96Wr8M/5-panasonic-home-theater-system-btt790.jpg",
+        "name": "Panasonic Home Theater System",
+        "description": "The system's bass reflex enclosures consist of a tuned port, which makes the subwoofer more power-efficient and adds bass depth. A 1000W RMS output of this Panasonic 5.1 home theatre system adds a high-pitched and exhilarating surround sound to your favourite movies. Its proprietary Direction Perception Control technology helps you perceive the sound from the appropriate direction. Besides, the Selectable Speaker Layout function of this Panasonic home theater allows you to arrange the speakers for optimum surround sound environment. A universal dock for iPod and iPhone plays music and videos with minimised sound degradation.",
+        "price": 995,
+        "minimunQuantity": 10,
+        "availableQuality": 120,
+        "category": "speaker"
+    },
+    {
+        "image": "https://i.ibb.co/kK1z2Wy/6-havit-g89w-wireless-game-pad-in-bd-at-bdshopcom.jpg",
+        "name": "Havit G89W WIRELESS GAME PAD",
+        "description": "The Havit G89W 2.4GHZ Wireless Vibration GamePad has an Interface of USB. The Havit GamePad has 12 Buttons and 2 analog Sticks with dual Vibration. There are additional features of this gamepad like, it has inch mode, turbo inch, and this gamepad is supported by PC, PS 2, and PS3.",
+        "price": 60,
+        "minimunQuantity": 100,
+        "availableQuality": 1900,
+        "category": "computer"
+    }
+]
