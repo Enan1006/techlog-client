@@ -5,7 +5,7 @@ const Header = () => {
     const menu = <div className='md:flex'>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/'>Tools</Link></li>
-        <li><Link to='/'>Dashboard</Link></li>
+        <li><Link to='/dashboard'>Dashboard</Link></li>
         <li><Link to='/login'>Login</Link></li>
     </div>
     return (
