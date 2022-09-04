@@ -9,6 +9,7 @@ import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import MyOrder from './Pages/Dashboard/MyOrder/MyOrder';
 import MyAccount from './Pages/Dashboard/MyAccount/MyAccount';
 import AddReview from './Pages/Dashboard/AddReview/AddReview';
+import Items from './Pages/Items/Items/Items';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />}></Route>
+        <Route path='/items' element={<Items />}></Route>
         <Route path='/dashboard' element={<Dashboard />}>
           <Route index element={<MyOrder />}></Route>
           <Route path='/dashboard/my-account' element={<MyAccount />}></Route>
