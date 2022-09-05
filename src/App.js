@@ -10,6 +10,7 @@ import MyOrder from './Pages/Dashboard/MyOrder/MyOrder';
 import MyAccount from './Pages/Dashboard/MyAccount/MyAccount';
 import AddReview from './Pages/Dashboard/AddReview/AddReview';
 import Items from './Pages/Items/Items/Items';
+import Signup from './Pages/Shared/Signup/Signup';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
           <Route path='/dashboard/add-review' element={<AddReview />}></Route>
         </Route>
         <Route path='/login' element={<Login />}></Route>
-        <Route path='/signup' element={<Login />}></Route>
+        <Route path='/signup' element={<Signup />}></Route>
       </Routes>
       <Footer />
     </div>

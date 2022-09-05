@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
 
 import Loader from '../Loader/Loader';
+import useToken from '../../../hooks/useToken';
 
 
 const Signup = () => {
@@ -24,6 +25,7 @@ const Signup = () => {
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] = useSignInWithGoogle(auth);
     const [updateProfile, updating, error] = useUpdateProfile(auth);
+    const [token] = useToken(user || userGoogle);
 
     if (loadingEmail || loadingGoogle || updating) {
         return <Loader></Loader>;
@@ -37,7 +39,7 @@ const Signup = () => {
 
     const onSubmit = async (data) => {
         await createUserWithEmailAndPassword(data.email, data.password);
-        await updateProfile({ displayName: data.name });
+        await updateProfile({ displayName: data.displayName });
         console.log(data)
         toast('Email verification has been sent');
         navigate(from, { replace: true });
@@ -47,22 +49,22 @@ const Signup = () => {
         <div>
             <div class="p-4 w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 my-20 mx-auto">
                 <form onSubmit={handleSubmit(onSubmit)} class="space-y-6" action="#">
-                    <h5 class="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h5>
+                    <h5 class="text-xl font-medium text-gray-900 dark:text-white">Register in to our platform</h5>
                     <div>
                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Name</label>
-                        <input {...register("name", {
+                        <input {...register("displayName", {
                             minLength: {
                                 value: 4,
                                 message: 'Name should contain at least 4 character'
                             },
-                            required: {
-                                value: true,
-                                message: "Name is required"
-                            }
+                            // required: {
+                            //     value: true,
+                            //     message: "Name is required"
+                            // }
                         })} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="John Doe" type="text" name="name" />
                         {/* {errors.name?.type === 'required' && "First name is required"} */}
-                        <span>{errors.name?.type === 'required' && <p className='text-red-500'>{errors.name?.message}</p>}</span>
-                        <span>{errors.name?.type === 'minLength' && <p className='text-red-500'>{errors.name?.message}</p>}</span>
+                        <span>{errors.displayName?.type === 'required' && <p className='text-red-500'>{errors.displayName?.message}</p>}</span>
+                        <span>{errors.displayName?.type === 'minLength' && <p className='text-red-500'>{errors.displayName?.message}</p>}</span>
                     </div>
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
@@ -94,14 +96,9 @@ const Signup = () => {
                         <span>{errors.password?.type === 'minLength' && <p className='text-red-500'>{errors.password?.message}</p>}</span>
                         <span>{errors.password?.type === 'pattern' && <p className='text-red-500'>{errors.password?.message}</p>}</span>
                     </div>
-                    <div class="flex items-start">
-                        <div class="flex items-start">
-                        </div>
-                        <Link to='/' class="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</Link>
-                    </div>
-                    <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
+                    <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Signup</button>
                     <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                        Not registered? <Link to='/reset-password' class="text-blue-700 hover:underline dark:text-blue-500">Create account</Link>
+                        Already have account? <Link to='/login' class="text-blue-700 hover:underline dark:text-blue-500">Login</Link>
                     </div>
                 </form>
                 <div className='mt-6 grid justify-center'>

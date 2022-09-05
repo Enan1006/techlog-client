@@ -9,7 +9,7 @@ const FeatureItem = () => {
             .then(data => setItems(data))
     }, [])
     return (
-        <div className='m-3 md:m-40'>
+        <div className='mx-auto md:mx-20 md:my-40'>
             <h2 className='text-green-600 text-4xl font-bold text-center mb-10'>Feature Items</h2>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
                 {
