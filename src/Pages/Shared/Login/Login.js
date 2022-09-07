@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loader from '../Loader/Loader';
+import useToken from '../../../hooks/useToken';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -20,11 +21,17 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] = useSignInWithGoogle(auth);
 
+    const token = useToken(userEmail || userGoogle)
+
+    let from = location.state?.from?.pathname || "/";
+    useEffect(() => {
+        if (token) {
+            // navigate(from, { replace: true });
+        }
+    }, [token, from, navigate])
+
     if (loadingEmail || loadingGoogle) {
         return <Loader></Loader>;
-    }
-    let from = location.state?.from?.pathname || "/";
-    if (userEmail || userGoogle) {
     }
 
     const onSubmit = data => {
@@ -33,9 +40,6 @@ const Login = () => {
     };
     if (errorEmail || errorGoogle) {
         toast(`${errorEmail?.message || errorGoogle?.message}`)
-    }
-    if (userEmail || userGoogle) {
-        navigate(from, { replace: true });
     }
     return (
         <div>

@@ -26,6 +26,7 @@ const Signup = () => {
     const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] = useSignInWithGoogle(auth);
     const [updateProfile, updating, error] = useUpdateProfile(auth);
     const [token] = useToken(user || userGoogle);
+    console.log("TOKEN", token)
 
     if (loadingEmail || loadingGoogle || updating) {
         return <Loader></Loader>;
