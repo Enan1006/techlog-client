@@ -23,7 +23,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />}>
           <Route index element={<MyOrder />}></Route>
           <Route path='/dashboard/update-account/:emailId' element={<UpdateAccount />}></Route>
-          <Route path='/dashboard/my-account' element={<MyAccount />}></Route>
+          <Route path='/dashboard/my-account/:emailId' element={<MyAccount />}></Route>
           <Route path='/dashboard/add-review' element={<AddReview />}></Route>
         </Route>
         <Route path='/login' element={<Login />}></Route>

@@ -10,6 +10,9 @@ const Dashboard = () => {
     const handleButton = () => {
         navigate(`/dashboard/update-account/${id}`)
     }
+    const handleAccountButton = () => {
+        navigate(`/dashboard/my-account/${id}`)
+    }
     return (
         <div>
             <div class="drawer drawer-mobile">
@@ -26,7 +29,7 @@ const Dashboard = () => {
                         <li><Link to='/dashboard'>My Order</Link></li>
                         {/* <li><Link to={handleButton}>Update Profile</Link></li> */}
                         <li><button onClick={handleButton}>Update Profile</button></li>
-                        <li><Link to='/dashboard/my-account'>My profile</Link></li>
+                        <li><button onClick={handleAccountButton}>My Profile</button></li>
                         <li><Link to='/dashboard/add-review'>Add Review</Link></li>
                     </ul>
 
