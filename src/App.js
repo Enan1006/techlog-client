@@ -11,6 +11,7 @@ import MyAccount from './Pages/Dashboard/MyAccount/MyAccount';
 import AddReview from './Pages/Dashboard/AddReview/AddReview';
 import Items from './Pages/Items/Items/Items';
 import Signup from './Pages/Shared/Signup/Signup';
+import UpdateAccount from './Pages/Dashboard/UpdateAccount/UpdateAccount';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/items' element={<Items />}></Route>
         <Route path='/dashboard' element={<Dashboard />}>
           <Route index element={<MyOrder />}></Route>
+          <Route path='/dashboard/update-account/:emailId' element={<UpdateAccount />}></Route>
           <Route path='/dashboard/my-account' element={<MyAccount />}></Route>
           <Route path='/dashboard/add-review' element={<AddReview />}></Route>
         </Route>

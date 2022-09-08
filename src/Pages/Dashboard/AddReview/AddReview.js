@@ -17,7 +17,8 @@ const AddReview = () => {
             email: email,
             rating: rating,
             message: message,
-        })
+        });
+        event.target.reset();
     }
     return (
         <div className='my-20 w-1/2 mx-auto'>

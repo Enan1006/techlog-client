@@ -1,7 +1,15 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link, Outlet, useNavigate, useParams } from 'react-router-dom';
+import auth from '../../../firebase.init';
 
 const Dashboard = () => {
+    const [user] = useAuthState(auth);
+    const navigate = useNavigate();
+    const id = user.email;
+    const handleButton = () => {
+        navigate(`/dashboard/update-account/${id}`)
+    }
     return (
         <div>
             <div class="drawer drawer-mobile">
@@ -16,6 +24,8 @@ const Dashboard = () => {
                     <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
                         {/* <!-- Sidebar content here --> */}
                         <li><Link to='/dashboard'>My Order</Link></li>
+                        {/* <li><Link to={handleButton}>Update Profile</Link></li> */}
+                        <li><button onClick={handleButton}>Update Profile</button></li>
                         <li><Link to='/dashboard/my-account'>My profile</Link></li>
                         <li><Link to='/dashboard/add-review'>Add Review</Link></li>
                     </ul>
