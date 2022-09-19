@@ -31,6 +31,7 @@ const Dashboard = () => {
                         <li><button onClick={handleButton}>Update Profile</button></li>
                         <li><button onClick={handleAccountButton}>My Profile</button></li>
                         <li><Link to='/dashboard/add-review'>Add Review</Link></li>
+                        <li><Link to='/dashboard/all-users'>All Users</Link></li>
                     </ul>
 
                 </div>
